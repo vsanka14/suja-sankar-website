@@ -1,0 +1,56 @@
+---
+export enum ROLES {
+  EDUCATOR = "EDUCATOR",
+  STUDENT = "STUDENT",
+  PARENT = "PARENT",
+}
+
+const ROLE_LABELS = {
+  [ROLES.STUDENT]: "Student",
+  [ROLES.EDUCATOR]: "Education Professional",
+  [ROLES.PARENT]: "Parent",
+};
+
+const ROLE_COLORS = {
+  [ROLES.STUDENT]:
+    "bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800",
+  [ROLES.EDUCATOR]:
+    "bg-purple-50 dark:bg-purple-900/30 border border-purple-100 dark:border-purple-800",
+  [ROLES.PARENT]:
+    "bg-green-50 dark:bg-green-900/30 border border-green-100 dark:border-green-800",
+};
+
+interface Props {
+  image: string;
+  name: string;
+  role: ROLES;
+  details?: string; // This replaces 'grade' and can be more flexible
+  content: string;
+}
+
+const { image, name, role, details, content } = Astro.props;
+const roleColor = ROLE_COLORS[role];
+const roleLabel = ROLE_LABELS[role];
+---
+
+<div
+  class={`rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow ${roleColor}`}
+>
+  <div class="flex items-center mb-4">
+    <div class="text-3xl mr-4">{image}</div>
+    <div>
+      <h3 class="font-semibold text-gray-900 dark:text-white">
+        {name}
+      </h3>
+      <p class="text-sm text-gray-500 dark:text-gray-400">
+        {roleLabel}
+      </p>
+      {
+        details && (
+          <p class="text-sm text-gray-500 dark:text-gray-400">{details}</p>
+        )
+      }
+    </div>
+  </div>
+  <p class="text-gray-600 dark:text-gray-300 italic">"{content}"</p>
+</div>

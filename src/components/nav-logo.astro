@@ -1,0 +1,85 @@
+---
+
+---
+
+<div class="flex items-center">
+  <a href="/" class="flex items-center group">
+    <div class="relative w-12 h-12">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg shadow-lg transition-all group-hover:from-purple-600 group-hover:to-blue-600"
+      >
+        <div
+          class="bubble-container absolute inset-0 opacity-0 group-hover:opacity-100"
+        >
+          {
+            Array.from({ length: 6 }).map((_, i) => (
+              <div class={`bubble bubble-${i + 1}`} />
+            ))
+          }
+        </div>
+      </div>
+      <div class="absolute inset-0 flex items-center justify-center">
+        <span class="text-lg font-bold text-white z-10">SS</span>
+      </div>
+    </div>
+    <span
+      class="ml-3 text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"
+    >
+      Suja Sankar
+    </span>
+  </a>
+</div>
+
+<style>
+  .bubble-container {
+    overflow: hidden;
+    border-radius: 0.5rem;
+    transition: opacity 0.3s ease;
+  }
+
+  .bubble {
+    @apply absolute rounded-full bg-white/30;
+    width: 10px;
+    height: 10px;
+    animation: float 2s infinite ease-out;
+  }
+
+  .bubble-1 {
+    left: 10%;
+    animation-delay: 0.2s;
+  }
+  .bubble-2 {
+    left: 30%;
+    animation-delay: 0.6s;
+  }
+  .bubble-3 {
+    left: 50%;
+    animation-delay: 0.1s;
+  }
+  .bubble-4 {
+    left: 70%;
+    animation-delay: 0.4s;
+  }
+  .bubble-5 {
+    left: 90%;
+    animation-delay: 0.3s;
+  }
+  .bubble-6 {
+    left: 20%;
+    animation-delay: 0.5s;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+</style>

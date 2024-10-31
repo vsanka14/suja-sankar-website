@@ -1,0 +1,43 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  calendlyUrl: string;
+}
+
+const { calendlyUrl } = Astro.props;
+---
+
+<div class="relative">
+  <div id="calendly-loading" class="text-center py-12">
+    <div
+      class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto"
+    >
+    </div>
+    <p class="mt-4 text-gray-600 dark:text-gray-400">Loading calendar...</p>
+  </div>
+
+  {/* Calendly inline widget */}
+  <div
+    class="calendly-inline-widget"
+    data-url={calendlyUrl}
+    style="min-width:320px;height:700px;"
+  >
+  </div>
+</div>
+
+<script src="https://assets.calendly.com/assets/external/widget.js" async
+></script>
+
+<script>
+  // Hide loading spinner when Calendly is ready
+  window.addEventListener("message", (e) => {
+    if (e.data.event === "calendly.event_scheduled") {
+      // Handle successful scheduling
+      console.log("Appointment scheduled!");
+    }
+    if (e.data.event && e.data.event.indexOf("calendly") === 0) {
+      document.getElementById("calendly-loading")?.classList.add("hidden");
+    }
+  });
+</script>
