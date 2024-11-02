@@ -1,0 +1,68 @@
+---
+import NavItem from "./nav-item.astro";
+import NavLogo from "./nav-logo.astro";
+import MobileNavButton from "./mobile-nav-btn.astro";
+
+const navItems = [
+  { href: "/", text: "Home" },
+  { href: "/about", text: "About" },
+  { href: "/videos", text: "Videos" },
+  { href: "/contact", text: "Contact" },
+];
+---
+
+<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="flex justify-between h-16">
+    <div class="flex items-center">
+      <NavLogo />
+    </div>
+
+    {/* Desktop Navigation */}
+    <div class="hidden md:flex space-x-8 items-center">
+      {navItems.map((item) => <NavItem href={item.href} text={item.text} />)}
+    </div>
+
+    {/* Mobile Navigation Button */}
+    <div class="md:hidden flex items-center">
+      <MobileNavButton />
+    </div>
+  </div>
+
+  {/* Mobile Navigation Menu */}
+  <div class="hidden md:hidden" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-800">
+      {
+        navItems.map((item) => (
+          <NavItem href={item.href} text={item.text} isMobile={true} />
+        ))
+      }
+    </div>
+  </div>
+</nav>
+
+<script>
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const hamburgerIcon = document.getElementById("hamburger-icon");
+  const testTubeIcon = document.getElementById("test-tube-icon");
+
+  mobileMenuButton?.addEventListener("click", () => {
+    const isExpanded =
+      mobileMenuButton.getAttribute("aria-expanded") === "true";
+    mobileMenuButton.setAttribute("aria-expanded", (!isExpanded).toString());
+    mobileMenu?.classList.toggle("hidden");
+
+    // Toggle icons
+    if (hamburgerIcon && testTubeIcon) {
+      if (!isExpanded) {
+        hamburgerIcon.classList.add("opacity-0");
+        testTubeIcon.classList.remove("opacity-0");
+        testTubeIcon.classList.add("menu-open");
+      } else {
+        hamburgerIcon.classList.remove("opacity-0");
+        testTubeIcon.classList.add("opacity-0");
+        testTubeIcon.classList.remove("menu-open");
+      }
+    }
+  });
+</script>
