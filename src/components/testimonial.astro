@@ -1,43 +1,40 @@
 ---
-export enum ROLES {
-  EDUCATOR = "EDUCATOR",
-  STUDENT = "STUDENT",
-  PARENT = "PARENT",
-}
+import { TestimonialRoles } from "../types/home";
+import classnames from "classnames";
 
 const ROLE_LABELS = {
-  [ROLES.STUDENT]: "Student",
-  [ROLES.EDUCATOR]: "Education Professional",
-  [ROLES.PARENT]: "Parent",
-};
-
-const ROLE_COLORS = {
-  [ROLES.STUDENT]:
-    "bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800",
-  [ROLES.EDUCATOR]:
-    "bg-purple-50 dark:bg-purple-900/30 border border-purple-100 dark:border-purple-800",
-  [ROLES.PARENT]:
-    "bg-green-50 dark:bg-green-900/30 border border-green-100 dark:border-green-800",
+  [TestimonialRoles.STUDENT]: "Student",
+  [TestimonialRoles.EDUCATOR]: "Education Professional",
+  [TestimonialRoles.PARENT]: "Parent",
 };
 
 interface Props {
-  image: string;
+  emoji: string;
   name: string;
-  role: ROLES;
-  details?: string; // This replaces 'grade' and can be more flexible
+  role: TestimonialRoles;
+  details?: string;
   content: string;
 }
 
-const { image, name, role, details, content } = Astro.props;
-const roleColor = ROLE_COLORS[role];
+const { emoji, name, role, details, content } = Astro.props;
 const roleLabel = ROLE_LABELS[role];
 ---
 
 <div
-  class={`rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow ${roleColor}`}
+  class={classnames(
+    "rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow",
+    {
+      "bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800":
+        role === TestimonialRoles.STUDENT,
+      "bg-purple-50 dark:bg-purple-900/30 border border-purple-100 dark:border-purple-800":
+        role === TestimonialRoles.EDUCATOR,
+      "bg-green-50 dark:bg-green-900/30 border border-green-100 dark:border-green-800":
+        role === TestimonialRoles.PARENT,
+    }
+  )}
 >
   <div class="flex items-center mb-4">
-    <div class="text-3xl mr-4">{image}</div>
+    <div class="text-3xl mr-4">{emoji}</div>
     <div>
       <h3 class="font-semibold text-gray-900 dark:text-white">
         {name}
