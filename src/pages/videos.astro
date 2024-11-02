@@ -1,41 +1,26 @@
 ---
 import MainLayout from "../layouts/main-layout.astro";
-import VideoThumbnail from "../components/video-thumbnail.astro";
+import Video from "../components/video.astro";
 import Card from "../components/card.astro";
+import type { VideosSection } from "../types/videos";
 
-// Example video data (you can replace this with real data later)
-const videos = [
-  {
-    title: "Introduction to Chemical Bonds",
-    description: "Learn about ionic and covalent bonds",
-    thumbnail: "🔬",
-    duration: "10:30",
-  },
-  {
-    title: "Balancing Chemical Equations",
-    description: "Master the art of equation balancing",
-    thumbnail: "⚖️",
-    duration: "15:45",
-  },
-  {
-    title: "Understanding pH Levels",
-    description: "Explore acids, bases, and the pH scale",
-    thumbnail: "🧪",
-    duration: "12:20",
-  },
-];
+const content = await import("../content/videos.md");
+const { videosSection } = content.frontmatter as {
+  videosSection: VideosSection;
+};
+const videos = videosSection.videos;
 ---
 
 <MainLayout title="My Videos">
   <Card
-    title="Chemistry Videos"
-    emoji="🎬"
-    description="Watch and learn from my collection of chemistry tutorials and demonstrations."
+    title={videosSection.title}
+    emoji={videosSection.emoji}
+    description={videosSection.description}
   >
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {
         videos.map((video) => (
-          <VideoThumbnail
+          <Video
             title={video.title}
             description={video.description}
             thumbnail={video.thumbnail}

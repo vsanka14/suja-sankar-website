@@ -3,7 +3,6 @@ import MainLayout from "../layouts/main-layout.astro";
 import Card from "../components/card.astro";
 import Hero from "../components/hero.astro";
 import Highlight, { HighlightColor } from "../components/highlight.astro";
-import HighlightQuote from "../components/highlight-quote.astro";
 import Testimonial from "../components/testimonial.astro";
 import type {
   HeroSection,
@@ -51,7 +50,11 @@ const testimonials = testimonialsSection.testimonials;
           description={highlights[2].description}
         />
       </div>
-      <HighlightQuote text={highlightsSection.highlightsQuote} />
+      <div class="prose max-w-none text-gray-600 dark:text-gray-300">
+        <blockquote class="border-l-4 border-blue-500 pl-4 italic">
+          {highlightsSection.highlightsQuote}
+        </blockquote>
+      </div>
     </Card>
 
     {/* Testimonials Section */}

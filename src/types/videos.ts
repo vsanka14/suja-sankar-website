@@ -1,4 +1,4 @@
-interface Video {
+export interface Video {
   title: string;
   description: string;
   url: string;
@@ -6,8 +6,9 @@ interface Video {
   duration: string;
 }
 
-interface VideosSection {
+export interface VideosSection {
   title: string;
+  description: string;
   emoji: string;
   videos: Video[];
 }

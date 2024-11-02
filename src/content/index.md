@@ -1,20 +1,12 @@
 ---
 heroSection:
   description:
-    As an experienced online chemistry tutor, I specialize in bringing
-    chemistry to life for students, making even the toughest topics accessible
-    and engaging. My goal? To help you excel with confidence.
+    With over 20 years of teaching experience, I help students discover
+    the fascinating world of chemistry through engaging and effective
+    instruction.
   primaryBtnText: Get Started
   secondaryBtnText: Learn More
   title: Making Chemistry Click
-tuitionHighlights:
-  - title: Teaching Excellence
-    description: Over 20 years of inspiring young minds in chemistry
-  - title: Personalized lessons
-    description: 1:1 personalized tutoring tailored to each student’s unique
-      learning style and pace
-  - title: Expert Resources
-    description: Curated materials for chemistry success
 highlightsSection:
   title: Chemistry Made Easy by Suja Sankar
   emoji: 🧪

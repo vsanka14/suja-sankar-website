@@ -7,6 +7,13 @@ import Calendly from "../components/calendly.astro";
 <MainLayout title="Contact Me">
   <div class="space-y-12">
     <Card
+      title="Schedule a Meeting"
+      emoji="📅"
+      description="Need to discuss something in detail? Schedule a meeting with me."
+    >
+      <Calendly calendlyUrl="https://calendly.com/vasishtshankar/1-1" />
+    </Card>
+    <Card
       title="Connect With Me"
       emoji="👋"
       description="Let's connect! Find me on LinkedIn or reach out via email."
@@ -99,13 +106,6 @@ import Calendly from "../components/calendly.astro";
           </div>
         </div>
       </div>
-    </Card>
-    <Card
-      title="Schedule a Meeting"
-      emoji="📅"
-      description="Need to discuss something in detail? Schedule a meeting with me."
-    >
-      <Calendly calendlyUrl="https://calendly.com/vasishtshankar/1-1" />
     </Card>
   </div>
 </MainLayout>
