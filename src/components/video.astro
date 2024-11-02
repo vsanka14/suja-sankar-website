@@ -3,9 +3,10 @@ interface Props {
   thumbnail: string;
   title: string;
   description: string;
+  url: string;
 }
 
-const { thumbnail, title, description } = Astro.props;
+const { thumbnail, title, description, url } = Astro.props;
 ---
 
 <div
@@ -26,11 +27,14 @@ const { thumbnail, title, description } = Astro.props;
       </p>
     </div>
     <div class="flex items-center justify-between text-sm mt-auto">
-      <button
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
         class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
       >
         Watch Now →
-      </button>
+      </a>
     </div>
   </div>
 </div>
