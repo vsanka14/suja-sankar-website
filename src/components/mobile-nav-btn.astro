@@ -42,6 +42,15 @@
   :global(.dark) #test-tube-icon .bubble {
     fill: rgb(255, 214, 255);
   }
+
+  #test-tube-icon .tube-outline {
+    stroke: rgb(255, 128, 255);
+    stroke-width: 1.5;
+  }
+
+  :global(.dark) #test-tube-icon .tube-outline {
+    stroke: rgb(255, 166, 255);
+  }
 </style>
 
 <button
@@ -68,10 +77,9 @@
     </g>
     <g class="opacity-0 transition-opacity duration-300" id="test-tube-icon">
       <path
+        class="tube-outline"
         stroke-linecap="round"
         stroke-linejoin="round"
-        stroke-width="2"
-        stroke="currentColor"
         fill="none"
         d="M9 4h6v4l-3 12h-0.5l-2.5-12z"></path>
       <path class="solution" d="M9.2 8h5.6l-2.8 11h-0.4l-2.4-11z"></path>
