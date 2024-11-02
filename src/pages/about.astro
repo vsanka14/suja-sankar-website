@@ -1,5 +1,5 @@
 ---
-import MainLayout from "../layouts/main-layout.astro";
+import Layout from "../layouts/layout.astro";
 import Card from "../components/card.astro";
 import type { AboutSection } from "../types/about";
 
@@ -10,8 +10,8 @@ const { aboutSection } = content.frontmatter as {
 const teachingJourneyPoints = aboutSection.teachingJourney;
 ---
 
-<MainLayout title="About Me">
-  <Card title="About Me" emoji="👩‍🔬">
+<Layout title="About Me">
+  <Card title={aboutSection.title} emoji={aboutSection.emoji}>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div class="prose max-w-none text-gray-600 dark:text-gray-300">
         <p class="mb-4 mt-1">
@@ -54,4 +54,4 @@ const teachingJourneyPoints = aboutSection.teachingJourney;
       </div>
     </div>
   </Card>
-</MainLayout>
+</Layout>

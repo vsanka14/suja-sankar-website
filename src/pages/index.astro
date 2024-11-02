@@ -1,5 +1,5 @@
 ---
-import MainLayout from "../layouts/main-layout.astro";
+import Layout from "../layouts/layout.astro";
 import Card from "../components/card.astro";
 import Hero from "../components/hero.astro";
 import Highlight, { HighlightColor } from "../components/highlight.astro";
@@ -21,7 +21,7 @@ const highlights = highlightsSection.highlights;
 const testimonials = testimonialsSection.testimonials;
 ---
 
-<MainLayout title="Home">
+<Layout title="Home">
   <div class="space-y-12">
     {/* Hero Section */}
     <Hero
@@ -74,4 +74,4 @@ const testimonials = testimonialsSection.testimonials;
       </div>
     </Card>
   </div>
-</MainLayout>
+</Layout>

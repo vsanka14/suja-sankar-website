@@ -83,7 +83,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Emoji", name: "emoji", widget: "string" }
-              - { label: "details", name: "details", widget: "string" }
+              - { label: "details", name: "details", widget: "markdown" }
               - { label: "Fun Fact", name: "funFact", widget: "string" }
               - label: "Teaching Journey"
                 name: "teachingJourney"
@@ -116,7 +116,6 @@ collections:
                       widget: "string",
                     }
                   - { label: "Video URL", name: "url", widget: "string" }
-                  - { duration: "Duration", name: "duration", widget: "string" }
                   - {
                       thumbnail: "Thumbnail",
                       name: "thumbnail",

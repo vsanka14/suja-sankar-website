@@ -1,5 +1,5 @@
 ---
-import MainLayout from "../layouts/main-layout.astro";
+import Layout from "../layouts/layout.astro";
 import Video from "../components/video.astro";
 import Card from "../components/card.astro";
 import type { VideosSection } from "../types/videos";
@@ -9,9 +9,10 @@ const { videosSection } = content.frontmatter as {
   videosSection: VideosSection;
 };
 const videos = videosSection.videos;
+console.log(videos[0]);
 ---
 
-<MainLayout title="My Videos">
+<Layout title="My Videos">
   <Card
     title={videosSection.title}
     emoji={videosSection.emoji}
@@ -24,10 +25,9 @@ const videos = videosSection.videos;
             title={video.title}
             description={video.description}
             thumbnail={video.thumbnail}
-            duration={video.duration}
           />
         ))
       }
     </div>
   </Card>
-</MainLayout>
+</Layout>
