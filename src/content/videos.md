@@ -20,4 +20,5 @@ videosSection:
       url: https://www.youtube.com/watch?v=HRiRtzyl0N0
       duration: 2:42
       thumbnail: /images/images.jpeg
+  description: Watch and learn from my collection of chemistry tutorials and demonstrations.
 ---
