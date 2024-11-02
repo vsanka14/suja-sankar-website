@@ -13,9 +13,9 @@ tuition_highlights:
   - title: Expert Resources
     description: Curated materials for chemistry success
 heroSection:
-  description: As an experienced online chemistry tutor, I specialize in bringing
-    chemistry to life for students, making even the toughest topics accessible
-    and engaging. My goal? To help you excel with confidence.
+  description: With over 20 years of teaching experience, I help students discover
+    the fascinating world of chemistry through engaging and effective
+    instruction.
   primaryBtnText: Get Started
   secondaryBtnText: Learn More
   title: Making Chemistry Click
