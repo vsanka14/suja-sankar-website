@@ -11,38 +11,62 @@ media_folder: "public/images"
 public_folder: "/images"
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "src/content/blog" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template
-    fields: # The fields for each document
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - {
-          label: "Featured Image",
-          name: "image",
-          widget: "image",
-          required: false,
-        }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "pages"
-    label: "Pages"
+  - name: "home"
+    label: "Home Page"
     files:
-      - file: "src/content/home.md"
+      - file: "src/content/index.md"
         label: "Home Page"
-        name: "home"
+        name: "homePage"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Hero Text", name: "hero_text", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
-
-      - file: "src/content/about.md"
-        label: "About Page"
-        name: "about"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Hero Section"
+            name: "heroSection"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }
+              - {
+                  label: "Primary Button Text",
+                  name: "primaryBtnText",
+                  widget: "string",
+                }
+              - {
+                  label: "Secondary Button Text",
+                  name: "secondaryBtnText",
+                  widget: "string",
+                }
+          - label: "Highlights Section"
+            name: "highlightsSection"
+            widget: "object"
+            fields:
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Section Emoji", name: "emoji", widget: "string" }
+              - label: "Highlights"
+                name: "highlights"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "string",
+                    }
+              - {
+                  label: "Highlights Quote",
+                  name: "highlightsQuote",
+                  widget: "string",
+                }
+          - label: "Testimonials Section"
+            name: "testimonialsSection"
+            widget: "object"
+            fields:
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Section Emoji", name: "emoji", widget: "string" }
+              - label: "Testimonials"
+                name: "testimonials"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Role", name: "role", widget: "string" }
+                  - { label: "Content", name: "content", widget: "text" }
+                  - { label: "Details", name: "details", widget: "string" }
+                  - { label: "Emoji", name: "emoji", widget: "string" }

@@ -1,24 +1,12 @@
 ---
-hero_section:
-  description: As an experienced online chemistry tutor, I specialize in bringing
-    chemistry to life for students, making even the toughest topics accessible
-    and engaging. My goal? To help you excel with confidence.
-  button_text: Get Started
-  secondary_button_text: Learn More
-tuition_highlights:
-  - title: Teaching Excellence
-    description: Over 20 years of inspiring young minds in chemistry
-  - title: Interactive Learning
-    description: Hands-on experiments and engaging demonstrations
-  - title: Expert Resources
-    description: Curated materials for chemistry success
 heroSection:
-  description: As an experienced online chemistry tutor, I specialize in bringing
+  description:
+    As an experienced online chemistry tutor, I specialize in bringing
     chemistry to life for students, making even the toughest topics accessible
     and engaging. My goal? To help you excel with confidence.
   primaryBtnText: Get Started
   secondaryBtnText: Learn More
-tuitionHighlights:
+highlightsSection:
   - title: Teaching Excellence
     description: Over 20 years of inspiring young minds in chemistry
   - title: Personalized lessons
@@ -26,17 +14,19 @@ tuitionHighlights:
       learning style and pace
   - title: Expert Resources
     description: Curated materials for chemistry success
-testimonials:
+testimonialsSection:
   - name: Dr. Sarah Chen
     role: EDUCATOR
-    content: Suja's innovative teaching methods and deep understanding of chemistry
+    content:
+      Suja's innovative teaching methods and deep understanding of chemistry
       have made her an invaluable mentor to both students and fellow teachers.
       Her ability to break down complex concepts is remarkable.
     details: Department Head, Science
     emoji: 👩‍🔬
   - name: James Miller
     role: STUDENT
-    content: Mrs. Sankar helped me discover my passion for chemistry. Her teaching
+    content:
+      Mrs. Sankar helped me discover my passion for chemistry. Her teaching
       style made even the most challenging topics approachable. I'm now pursuing
       Chemical Engineering in college.
     details: Class of 2023

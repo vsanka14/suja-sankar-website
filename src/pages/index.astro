@@ -4,6 +4,9 @@ import Testimonial, {
   ROLES as TESTIMONIAL_ROLES,
 } from "../components/testimonial.astro";
 import Card from "../components/card.astro";
+import Highlight, { HighlightColor } from "../components/highlight.astro";
+import Hero from "../components/hero.astro";
+import HighlightQuote from "../components/highlight-quote.astro";
 
 const testimonials = [
   {
@@ -31,106 +34,44 @@ const testimonials = [
     image: "👋",
   },
 ];
+
+const content = await import("../content/index.md");
+const { heroSection, highlightsSection, testimonialsSection } =
+  content.frontmatter;
 ---
 
 <MainLayout title="Home">
   <div class="space-y-12">
-    <div class="text-center py-16 md:py-24">
-      <h1
-        class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6"
-      >
-        Making Chemistry
-        <span
-          class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500"
-        >
-          Click
-        </span>
-      </h1>
-      <p
-        class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto"
-      >
-        With over 20 years of teaching experience, I help students discover the
-        fascinating world of chemistry through engaging and effective
-        instruction.
-      </p>
-      <div class="flex justify-center gap-4">
-        <a
-          href="/contact"
-          class="inline-flex items-center px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white transition-colors duration-200"
-        >
-          Get Started
-          <svg
-            class="w-5 h-5 ml-2"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-          </svg>
-        </a>
-        <a
-          href="/about"
-          class="inline-flex items-center px-6 py-3 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 transition-colors duration-200"
-        >
-          Learn More
-        </a>
-      </div>
-    </div>
+    {/* Hero Section */}
+    <Hero
+      title="Making Chemistry Click"
+      description="With over 20 years of teaching experience, I help students discover the fascinating world of chemistry through engaging and effective instruction."
+      primaryBtnText="Get Started"
+      secondaryBtnText="Learn More"
+    />
 
+    {/* Highlights Section */}
     <Card title="Suja Sankar's Chemistry Tuitions" emoji="🧪">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <div
-          class="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg border border-blue-100 dark:border-blue-800"
-        >
-          <h2
-            class="text-xl font-semibold mb-2 text-blue-800 dark:text-blue-300"
-          >
-            Teaching Excellence
-          </h2>
-          <p class="text-blue-600 dark:text-blue-400">
-            Over 20 years of inspiring young minds in chemistry
-          </p>
-        </div>
-
-        <div
-          class="bg-green-50 dark:bg-green-900/30 p-4 rounded-lg border border-green-100 dark:border-green-800"
-        >
-          <h2
-            class="text-xl font-semibold mb-2 text-green-800 dark:text-green-300"
-          >
-            Interactive Learning
-          </h2>
-          <p class="text-green-600 dark:text-green-400">
-            Hands-on experiments and engaging demonstrations
-          </p>
-        </div>
-
-        <div
-          class="bg-purple-50 dark:bg-purple-900/30 p-4 rounded-lg border border-purple-100 dark:border-purple-800"
-        >
-          <h2
-            class="text-xl font-semibold mb-2 text-purple-800 dark:text-purple-300"
-          >
-            Expert Resources
-          </h2>
-          <p class="text-purple-600 dark:text-purple-400">
-            Curated materials for chemistry success
-          </p>
-        </div>
+        <Highlight
+          color={HighlightColor.BLUE}
+          title="Teaching Excellence"
+          description="Over 20 years of inspiring young minds in chemistry"
+        />
+        <Highlight
+          color={HighlightColor.GREEN}
+          title="Personalized lessons"
+          description="1:1 personalized tutoring tailored to each student’s unique learning style and pace"
+        />
+        <Highlight
+          color={HighlightColor.PURPLE}
+          title="Expert Resources"
+          description="Curated materials for chemistry success"
+        />
       </div>
-
-      <div class="prose max-w-none text-gray-600 dark:text-gray-300">
-        <blockquote class="border-l-4 border-blue-500 pl-4 italic">
-          "Chemistry is not just about understanding molecules and reactions;
-          it's about discovering how our world works at its most fundamental
-          level. I'm here to make that journey of discovery exciting and
-          accessible for every student."
-        </blockquote>
-      </div>
+      <HighlightQuote
+        text="Chemistry is not just about understanding molecules and reactions; it's about discovering how our world works at its most fundamental level. I'm here to make that journey of discovery exciting and accessible for every student."
+      />
     </Card>
 
     {/* Testimonials Section */}
