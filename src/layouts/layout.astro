@@ -25,11 +25,51 @@ const { title } = Astro.props;
           <div class="flex items-center">
             <NavLogo />
           </div>
-          <div class="flex space-x-8 items-center">
+
+          {/* Desktop Navigation */}
+          <div class="hidden md:flex space-x-8 items-center">
             <NavItem href="/" text="Home" />
             <NavItem href="/about" text="About" />
             <NavItem href="/videos" text="Videos" />
             <NavItem href="/contact" text="Contact" />
+          </div>
+
+          {/* Mobile Navigation Button */}
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              {/* Hamburger icon */}
+              <svg
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation Menu */}
+        <div class="hidden md:hidden" id="mobile-menu">
+          <div class="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-800">
+            <NavItem href="/" text="Home" isMobile={true} />
+            <NavItem href="/about" text="About" isMobile={true} />
+            <NavItem href="/videos" text="Videos" isMobile={true} />
+            <NavItem href="/contact" text="Contact" isMobile={true} />
           </div>
         </div>
       </nav>
@@ -40,5 +80,21 @@ const { title } = Astro.props;
     </main>
 
     <Footer />
+
+    <script>
+      // Toggle mobile menu
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuButton?.addEventListener("click", () => {
+        const isExpanded =
+          mobileMenuButton.getAttribute("aria-expanded") === "true";
+        mobileMenuButton.setAttribute(
+          "aria-expanded",
+          (!isExpanded).toString()
+        );
+        mobileMenu?.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>
