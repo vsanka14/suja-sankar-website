@@ -18,7 +18,7 @@ heroSection:
     and engaging. My goal? To help you excel with confidence.
   primaryBtnText: Get Started
   secondaryBtnText: Learn More
-  title: Making Chemistry Click
+  title: Making Chemistry Click!
 tuitionHighlights:
   - title: Teaching Excellence
     description: Over 20 years of inspiring young minds in chemistry
