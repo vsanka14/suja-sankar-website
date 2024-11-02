@@ -12,6 +12,20 @@ tuition_highlights:
     description: Hands-on experiments and engaging demonstrations
   - title: Expert Resources
     description: Curated materials for chemistry success
+heroSection:
+  description: As an experienced online chemistry tutor, I specialize in bringing
+    chemistry to life for students, making even the toughest topics accessible
+    and engaging. My goal? To help you excel with confidence.
+  primaryBtnText: Get Started
+  secondaryBtnText: Learn More
+tuitionHighlights:
+  - title: Teaching Excellence
+    description: Over 20 years of inspiring young minds in chemistry
+  - title: Personalized lessons
+    description: 1:1 personalized tutoring tailored to each student’s unique
+      learning style and pace
+  - title: Expert Resources
+    description: Curated materials for chemistry success
 testimonials:
   - name: Dr. Sarah Chen
     role: EDUCATOR
