@@ -50,7 +50,7 @@ testimonials:
     details: Parent of AP Chemistry Student
     emoji: 👋
 highlightsSection:
-  title: Chemistry Made Easy by Suja Sankar
+  title: Chemistry Made Easy
   emoji: 🧪
   highlightsQuote: Chemistry is not just about understanding molecules and
     reactions; it's about discovering how our world works at its most
