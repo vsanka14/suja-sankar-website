@@ -197,22 +197,49 @@ collections:
             name: "videosSection"
             widget: "object"
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "string" }
-              - { label: "Emoji", name: "emoji", widget: "string" }
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "string",
+                  hint: "Title of the videos section. Maximum length: 2 words.",
+                }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "string",
+                  hint: "Description of the videos section. Maximum length: 15 words.",
+                }
+              - {
+                  label: "Emoji",
+                  name: "emoji",
+                  widget: "string",
+                  hint: "Emoji for the videos section. Use https://emojipedia.org/ to search and paste emojis.",
+                }
               - label: "Videos"
                 name: "videos"
                 widget: "list"
                 fields:
-                  - { label: "Title", name: "title", widget: "string" }
+                  - {
+                      label: "Title",
+                      name: "title",
+                      widget: "string",
+                      hint: "Title of the YouTube video. Maximum length: 7 words.",
+                    }
                   - {
                       label: "Description",
                       name: "description",
                       widget: "string",
+                      hint: "Description of the YouTube video. Maximum length: 20 words.",
                     }
-                  - { label: "Video URL", name: "url", widget: "string" }
+                  - {
+                      label: "Video URL",
+                      name: "url",
+                      widget: "string",
+                      hint: "URL of the youtube video. Example: https://www.youtube.com/watch?v=HRiRtzyl0N0",
+                    }
                   - {
                       thumbnail: "Thumbnail",
                       name: "thumbnail",
                       widget: "image",
+                      hint: "Thumbnail to be used for the youtube video card. Pick a good one :).",
                     }
