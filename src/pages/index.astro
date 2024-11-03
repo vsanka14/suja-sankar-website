@@ -1,16 +1,16 @@
 ---
-import Layout from "../layouts/layout.astro";
-import Card from "../components/card.astro";
-import Hero from "../components/hero.astro";
-import Highlight, { HighlightColor } from "../components/highlight.astro";
-import Testimonial from "../components/testimonial.astro";
+import Layout from "@/layouts/layout.astro";
+import Card from "@/components/card.astro";
+import Hero from "@/components/hero.astro";
+import Highlight, { HighlightColor } from "@/components/highlight.astro";
+import Testimonial from "@/components/testimonial.astro";
 import type {
   HeroSection,
   HighlightsSection,
   TestimonialsSection,
-} from "../types/home";
+} from "@/types/home";
 
-const content = await import("../content/index.md");
+const content = await import("@/content/index.md");
 const { heroSection, highlightsSection, testimonialsSection } =
   content.frontmatter as {
     heroSection: HeroSection;
