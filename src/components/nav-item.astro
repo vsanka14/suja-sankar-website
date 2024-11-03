@@ -78,6 +78,7 @@ const { href, text, isMobile = false } = Astro.props;
 
 <a
   href={href}
+  aria-label={`Link to the ${text} page`}
   class:list={[
     "hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200",
     isMobile
