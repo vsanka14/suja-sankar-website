@@ -3,7 +3,7 @@ videosSection:
   title: Videos
   emoji: 🎬
   videos:
-    - title: Law Of Conversation of Mass Explained
+    - title: Law of Conversation of Mass Explained
       description: This video explains the Law of Conservation of Mass in detail with
         a demonstrated experiment to explain the law.
       url: https://www.youtube.com/watch?v=EEcjMJdQA3w
