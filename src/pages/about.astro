@@ -3,6 +3,12 @@ import Layout from "@/layouts/layout.astro";
 import Card from "@/components/card.astro";
 import type { AboutSection } from "@/types/about";
 
+const metadata = {
+  title: "About Me",
+  description:
+    "Meet Prof. Suja Sankar - Texas-certified chemistry teacher with extensive experience in AP and high school chemistry education. Learn about her teaching philosophy and proven track record of helping students succeed in chemistry.",
+};
+
 const content = await import("@/content/about.md");
 const { aboutSection } = content.frontmatter as {
   aboutSection: AboutSection;
@@ -10,7 +16,7 @@ const { aboutSection } = content.frontmatter as {
 const teachingJourneyPoints = aboutSection.teachingJourney;
 ---
 
-<Layout title="About Me">
+<Layout title={metadata.title} description={metadata.description}>
   <Card title={aboutSection.title} emoji={aboutSection.emoji}>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 py-4">
       {/* Left column: Details with image */}

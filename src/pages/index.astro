@@ -10,6 +10,12 @@ import type {
   TestimonialsSection,
 } from "@/types/home";
 
+const metadata = {
+  title: "Home",
+  description:
+    "Transform your high school and AP Chemistry understanding with Prof. Suja Sankar, a Texas-certified chemistry teacher. Get personalized 1:1 tutoring, clear explanations, and proven study strategies to excel in your chemistry classes.",
+};
+
 const content = await import("@/content/index.md");
 const { heroSection, highlightsSection, testimonialsSection } =
   content.frontmatter as {
@@ -21,7 +27,7 @@ const highlights = highlightsSection.highlights;
 const testimonials = testimonialsSection.testimonials;
 ---
 
-<Layout title="Home">
+<Layout title={metadata.title} description={metadata.description}>
   <div class="space-y-12">
     {/* Hero Section */}
     <Hero

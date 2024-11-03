@@ -4,6 +4,12 @@ import Video from "@/components/video.astro";
 import Card from "@/components/card.astro";
 import type { VideosSection } from "@/types/videos";
 
+const metadata = {
+  title: "My Videos",
+  description:
+    "Access free AP and high school chemistry video lessons by Prof. Suja Sankar. Clear explanations of complex chemistry concepts, step-by-step problem solving, and exam preparation strategies to boost your understanding.",
+};
+
 const content = await import("@/content/videos.md");
 const { videosSection } = content.frontmatter as {
   videosSection: VideosSection;
@@ -11,7 +17,7 @@ const { videosSection } = content.frontmatter as {
 const videos = videosSection.videos;
 ---
 
-<Layout title="My Videos">
+<Layout title={metadata.title} description={metadata.description}>
   <Card
     title={videosSection.title}
     emoji={videosSection.emoji}

@@ -2,9 +2,15 @@
 import Layout from "@/layouts/layout.astro";
 import Card from "@/components/card.astro";
 import Calendly from "@/components/calendly.astro";
+
+const metadata = {
+  title: "Contact Me",
+  description:
+    "Need to discuss something in detail? Schedule a meeting with me. Let's connect! Find me on the following platforms.",
+};
 ---
 
-<Layout title="Contact Me">
+<Layout title={metadata.title} description={metadata.description}>
   <div class="space-y-12">
     <Card
       title="Schedule a Meeting"
