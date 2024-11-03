@@ -12,11 +12,17 @@ const teachingJourneyPoints = aboutSection.teachingJourney;
 
 <Layout title="About Me">
   <Card title={aboutSection.title} emoji={aboutSection.emoji}>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div
-        class="prose max-w-none text-gray-600 dark:text-gray-300 px-4 py-4 leading-relaxed"
-      >
-        <div class="mb-4 mt-1">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 py-4">
+      {/* Left column: Details with image */}
+      <div class="lg:col-span-2 space-y-6">
+        <div
+          class="prose max-w-none text-gray-600 dark:text-gray-300 leading-relaxed"
+        >
+          <img
+            src="/images/suja-sankar.jpg"
+            alt="Suja Sankar"
+            class="float-left mr-6 mb-4 w-64 h-64 object-cover rounded-lg shadow-md border border-gray-100 dark:border-gray-700"
+          />
           {
             aboutSection.details
               .split("\n\n")
@@ -26,21 +32,27 @@ const teachingJourneyPoints = aboutSection.teachingJourney;
               )
           }
         </div>
-        <div
-          class="bg-yellow-50 dark:bg-yellow-900/30 border-l-4 border-yellow-400 dark:border-yellow-500 p-4 mb-4"
-        >
-          <h3
-            class="text-md font-semibold text-yellow-800 dark:text-yellow-300"
+
+        <div class="clear-both">
+          <div
+            class="bg-yellow-50 dark:bg-yellow-900/30 border-l-4 border-yellow-400 dark:border-yellow-500 p-4"
           >
-            Fun Fact
-          </h3>
-          <p class="text-sm text-yellow-700 dark:text-yellow-400">
-            {aboutSection.funFact}
-          </p>
+            <h3
+              class="text-md font-semibold text-yellow-800 dark:text-yellow-300"
+            >
+              Fun Fact
+            </h3>
+            <p class="text-sm text-yellow-700 dark:text-yellow-400">
+              {aboutSection.funFact}
+            </p>
+          </div>
         </div>
       </div>
 
-      <div class="bg-gray-50 dark:bg-gray-700/50 p-6 rounded-lg h-fit">
+      {/* Right column: Teaching Journey */}
+      <div
+        class="bg-gray-50 dark:bg-gray-700/50 p-6 rounded-lg h-fit lg:sticky lg:top-4"
+      >
         <h2
           class="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-4"
         >
@@ -64,3 +76,16 @@ const teachingJourneyPoints = aboutSection.teachingJourney;
     </div>
   </Card>
 </Layout>
+
+<style>
+  @media (max-width: 640px) {
+    img {
+      float: none;
+      margin-right: 0;
+      margin-bottom: 1.5rem;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+    }
+  }
+</style>
