@@ -8,5 +8,6 @@ export interface AboutSection {
   emoji: string;
   details: string;
   funFact: string;
+  image: string;
   teachingJourney: TeachingJourney[];
 }

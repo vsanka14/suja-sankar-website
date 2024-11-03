@@ -22,53 +22,112 @@ collections:
             name: "heroSection"
             widget: "object"
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "string" }
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "string",
+                  hint: "Title of the hero section in the landing page. Maximum length: 3 words",
+                }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "string",
+                  hint: "Description of the hero section in the landing page. Maximum length: 22 words.",
+                }
               - {
                   label: "Primary Button Text",
                   name: "primaryBtnText",
                   widget: "string",
+                  hint: "Text for the primary button in the hero section. Maximum length: 2 words",
                 }
               - {
                   label: "Secondary Button Text",
                   name: "secondaryBtnText",
                   widget: "string",
+                  hint: "Text for the secondary button in the hero section. Maximum length: 2 words",
                 }
           - label: "Highlights Section"
             name: "highlightsSection"
             widget: "object"
             fields:
-              - { label: "Section Title", name: "title", widget: "string" }
-              - { label: "Section Emoji", name: "emoji", widget: "string" }
+              - {
+                  label: "Section Title",
+                  name: "title",
+                  widget: "string",
+                  hint: "Title of the highlights section in the landing page. Maximum length: 3 words",
+                }
+              - {
+                  label: "Section Emoji",
+                  name: "emoji",
+                  widget: "string",
+                  hint: "Emoji for the highlights section. Use https://emojipedia.org/ to search and paste emojis.",
+                }
               - label: "Highlights"
                 name: "highlights"
                 widget: "list"
                 fields:
-                  - { label: "Title", name: "title", widget: "string" }
+                  - {
+                      label: "Title",
+                      name: "title",
+                      widget: "string",
+                      hint: "Title of the highlight. Maximum length: 2 words",
+                    }
                   - {
                       label: "Description",
                       name: "description",
                       widget: "string",
+                      hint: "Description of the highlight. Maximum length: 15 words",
                     }
               - {
                   label: "Highlights Quote",
                   name: "highlightsQuote",
                   widget: "string",
+                  hint: "Quote for the highlights section. Maximum length: 35 words",
                 }
           - label: "Testimonials Section"
             name: "testimonialsSection"
             widget: "object"
             fields:
-              - { label: "Section Title", name: "title", widget: "string" }
-              - { label: "Section Emoji", name: "emoji", widget: "string" }
+              - {
+                  label: "Section Title",
+                  name: "title",
+                  widget: "string",
+                  hint: "Title of the testimonials section in the landing page. Maximum length: 2 words",
+                }
+              - {
+                  label: "Section Emoji",
+                  name: "emoji",
+                  widget: "string",
+                  hint: "Emoji for the highlights section. Use https://emojipedia.org/ to search and paste emojis.",
+                }
               - label: "Testimonials"
                 name: "testimonials"
                 widget: "list"
                 fields:
-                  - { label: "Name", name: "name", widget: "string" }
-                  - { label: "Role", name: "role", widget: "string" }
-                  - { label: "Content", name: "content", widget: "text" }
-                  - { label: "Details", name: "details", widget: "string" }
+                  - {
+                      label: "Name",
+                      name: "name",
+                      widget: "string",
+                      hint: "Name of the person writing the testimonial. Example: Dr. Sarah Chen",
+                    }
+                  - {
+                      label: "Role",
+                      name: "role",
+                      widget: "string",
+                      hint: "Role of the person writing the testimonial. Example: Education Professional / Student / Parent",
+                    }
+                  - {
+                      label: "Content",
+                      name: "content",
+                      widget: "text",
+                      hint: "The actual testimonial content. Maximum length: 40 words.",
+                    }
+                  - {
+                      label: "Details",
+                      name: "details",
+                      widget: "string",
+                      hint: "Details of the person writing the testimonial. Example: Department Head, Science / Class of 2023 / Parent of AP Chemistry student. Maximum length: 5 words.",
+                    }
                   - { label: "Emoji", name: "emoji", widget: "string" }
   - name: "about"
     label: "About Page"
