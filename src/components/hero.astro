@@ -7,11 +7,6 @@ interface Props {
 }
 const { title, description, primaryBtnText, secondaryBtnText } = Astro.props;
 
-/**
- * Splits title into two parts: all except the last word and the last word.
- * @param str
- * @returns {allExceptLast: string, lastWord: string}
- */
 function splitTitle(str: string) {
   const words = str.trim().split(" ");
   const allExceptLast = words.slice(0, -1).join(" ");
