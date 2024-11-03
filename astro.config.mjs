@@ -19,15 +19,6 @@ export default defineConfig({
       wrap: true,
     },
   },
-  vite: {
-    resolve: {
-      alias: {
-        "@": path.resolve(__dirname, "./src"),
-        "@components": path.resolve(__dirname, "./src/components"),
-        "@layouts": path.resolve(__dirname, "./src/layouts"),
-        "@styles": path.resolve(__dirname, "./src/styles"),
-        "@content": path.resolve(__dirname, "./src/content"),
-      },
-    },
-  },
+  srcDir: "./src",
+  outDir: "./dist",
 });

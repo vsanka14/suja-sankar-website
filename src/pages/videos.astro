@@ -1,10 +1,10 @@
 ---
-import Layout from "@/layouts/layout.astro";
-import Video from "@/components/video.astro";
-import Card from "@/components/card.astro";
-import type { VideosSection } from "@/types/videos";
+import Layout from "src/layouts/layout.astro";
+import Video from "src/components/video.astro";
+import Card from "src/components/card.astro";
+import type { VideosSection } from "src/types/videos";
 
-const content = await import("@/content/videos.md");
+const content = await import("src/content/videos.md");
 const { videosSection } = content.frontmatter as {
   videosSection: VideosSection;
 };

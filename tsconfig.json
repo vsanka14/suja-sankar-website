@@ -3,13 +3,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@styles/*": ["src/styles/*"],
-      "@content/*": ["src/content/*"]
+      "src/*": ["src/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.astro"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }
