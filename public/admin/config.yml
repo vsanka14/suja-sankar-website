@@ -2,12 +2,9 @@ backend:
   name: git-gateway
   branch: master
 
-# When using local development proxy
 local_backend: true
 
-# Media files will be stored in the repo under public/images
 media_folder: "public/images"
-# The src attribute for uploaded media will begin with /images
 public_folder: "/images"
 
 collections:
@@ -27,24 +24,44 @@ collections:
                   name: "title",
                   widget: "string",
                   hint: "Title of the hero section in the landing page. Maximum length: 3 words.",
+                  pattern:
+                    [
+                      '^(?:\s*\S+(?:\s+\S+){0,2}\s*)$',
+                      "Must be 3 words or less",
+                    ],
                 }
               - {
                   label: "Description",
                   name: "description",
                   widget: "string",
                   hint: "Description of the hero section in the landing page. Maximum length: 22 words.",
+                  pattern:
+                    [
+                      '^(?:\s*\S+(?:\s+\S+){0,21}\s*)$',
+                      "Must be 22 words or less",
+                    ],
                 }
               - {
                   label: "Primary Button Text",
                   name: "primaryBtnText",
                   widget: "string",
                   hint: "Text for the primary button in the hero section. Maximum length: 2 words.",
+                  pattern:
+                    [
+                      '^(?:\s*\S+(?:\s+\S+){0,1}\s*)$',
+                      "Must be 2 words or less",
+                    ],
                 }
               - {
                   label: "Secondary Button Text",
                   name: "secondaryBtnText",
                   widget: "string",
                   hint: "Text for the secondary button in the hero section. Maximum length: 2 words.",
+                  pattern:
+                    [
+                      '^(?:\s*\S+(?:\s+\S+){0,1}\s*)$',
+                      "Must be 2 words or less",
+                    ],
                 }
           - label: "Highlights Section"
             name: "highlightsSection"
@@ -55,6 +72,11 @@ collections:
                   name: "title",
                   widget: "string",
                   hint: "Title of the highlights section in the landing page. Maximum length: 3 words.",
+                  pattern:
+                    [
+                      '^(?:\s*\S+(?:\s+\S+){0,2}\s*)$',
+                      "Must be 3 words or less",
+                    ],
                 }
               - {
                   label: "Section Emoji",
@@ -71,18 +93,33 @@ collections:
                       name: "title",
                       widget: "string",
                       hint: "Title of the highlight. Maximum length: 2 words.",
+                      pattern:
+                        [
+                          '^(?:\s*\S+(?:\s+\S+){0,1}\s*)$',
+                          "Must be 2 words or less",
+                        ],
                     }
                   - {
                       label: "Description",
                       name: "description",
                       widget: "string",
                       hint: "Description of the highlight. Maximum length: 15 words.",
+                      pattern:
+                        [
+                          '^(?:\s*\S+(?:\s+\S+){0,14}\s*)$',
+                          "Must be 15 words or less",
+                        ],
                     }
               - {
                   label: "Highlights Quote",
                   name: "highlightsQuote",
                   widget: "string",
                   hint: "Quote for the highlights section. Maximum length: 35 words.",
+                  pattern:
+                    [
+                      '^(?:\s*\S+(?:\s+\S+){0,34}\s*)$',
+                      "Must be 35 words or less",
+                    ],
                 }
           - label: "Testimonials Section"
             name: "testimonialsSection"
@@ -93,6 +130,11 @@ collections:
                   name: "title",
                   widget: "string",
                   hint: "Title of the testimonials section in the landing page. Maximum length: 2 words.",
+                  pattern:
+                    [
+                      '^(?:\s*\S+(?:\s+\S+){0,1}\s*)$',
+                      "Must be 2 words or less",
+                    ],
                 }
               - {
                   label: "Section Emoji",
@@ -115,18 +157,33 @@ collections:
                       name: "role",
                       widget: "string",
                       hint: "Role of the person writing the testimonial. Allowed values: Education Professional / Student / Parent.",
+                      pattern:
+                        [
+                          "^(Education Professional|Student|Parent)$",
+                          "Must be one of: Education Professional, Student, or Parent",
+                        ],
                     }
                   - {
                       label: "Content",
                       name: "content",
                       widget: "text",
-                      hint: "The actual testimonial content. Maximum length: 40 words.",
+                      hint: "The actual testimonial content. Maximum length: 60 words.",
+                      pattern:
+                        [
+                          '^(?:\s*\S+(?:\s+\S+){0,59}\s*)$',
+                          "Must be 60 words or less",
+                        ],
                     }
                   - {
                       label: "Details",
                       name: "details",
                       widget: "string",
                       hint: "Details of the person writing the testimonial. Example: Department Head, Science / Class of 2023 / Parent of AP Chemistry student. Maximum length: 5 words.",
+                      pattern:
+                        [
+                          '^(?:\s*\S+(?:\s+\S+){0,4}\s*)$',
+                          "Must be 5 words or less",
+                        ],
                     }
                   - { label: "Emoji", name: "emoji", widget: "string" }
   - name: "about"
@@ -145,6 +202,11 @@ collections:
                   name: "title",
                   widget: "string",
                   hint: "Title of the about me section. Maximum length: 2 words.",
+                  pattern:
+                    [
+                      '^(?:\s*\S+(?:\s+\S+){0,1}\s*)$',
+                      "Must be 2 words or less",
+                    ],
                 }
               - {
                   label: "Emoji",
@@ -156,13 +218,23 @@ collections:
                   label: "details",
                   name: "details",
                   widget: "markdown",
-                  hint: "Main content for about me section. Use 2-3 paragraphs. Maximum length: 160 words.",
+                  hint: "Main content for about me section. Use 2-3 paragraphs. Maximum length: 200 words.",
+                  pattern:
+                    [
+                      '^(?:\s*\S+(?:\s+\S+){0,199}\s*)$',
+                      "Must be 200 words or less",
+                    ],
                 }
               - {
                   label: "Fun Fact",
                   name: "funFact",
                   widget: "string",
                   hint: "Fun fact about you. Maximum length: 20 words.",
+                  pattern:
+                    [
+                      '^(?:\s*\S+(?:\s+\S+){0,19}\s*)$',
+                      "Must be 20 words or less",
+                    ],
                 }
               - {
                   label: "Image",
@@ -184,7 +256,12 @@ collections:
                       label: "Text",
                       name: "text",
                       widget: "string",
-                      hint: "Point to be shown in the teaching journey card. The foramt should be like this - [area]: [description about area]. Use quantifiable points wherever possible. For example:\nTeaching Experience: 20+ years across USA and India. Maximum length: 12 words.",
+                      hint: "Point to be shown in the teaching journey card. The format should be like this - [area]: [description about area]. Use quantifiable points wherever possible. For example:\nTeaching Experience: 20+ years across USA and India. Maximum length: 12 words.",
+                      pattern:
+                        [
+                          '^(?:\s*\S+(?:\s+\S+){0,11}\s*)$',
+                          "Must be 12 words or less",
+                        ],
                     }
   - name: "videos"
     label: "Videos Page"
@@ -202,12 +279,22 @@ collections:
                   name: "title",
                   widget: "string",
                   hint: "Title of the videos section. Maximum length: 2 words.",
+                  pattern:
+                    [
+                      '^(?:\s*\S+(?:\s+\S+){0,1}\s*)$',
+                      "Must be 2 words or less",
+                    ],
                 }
               - {
                   label: "Description",
                   name: "description",
                   widget: "string",
                   hint: "Description of the videos section. Maximum length: 15 words.",
+                  pattern:
+                    [
+                      '^(?:\s*\S+(?:\s+\S+){0,14}\s*)$',
+                      "Must be 15 words or less",
+                    ],
                 }
               - {
                   label: "Emoji",
@@ -224,21 +311,36 @@ collections:
                       name: "title",
                       widget: "string",
                       hint: "Title of the YouTube video. Maximum length: 7 words.",
+                      pattern:
+                        [
+                          '^(?:\s*\S+(?:\s+\S+){0,6}\s*)$',
+                          "Must be 7 words or less",
+                        ],
                     }
                   - {
                       label: "Description",
                       name: "description",
                       widget: "string",
                       hint: "Description of the YouTube video. Maximum length: 20 words.",
+                      pattern:
+                        [
+                          '^(?:\s*\S+(?:\s+\S+){0,19}\s*)$',
+                          "Must be 20 words or less",
+                        ],
                     }
                   - {
                       label: "Video URL",
                       name: "url",
                       widget: "string",
                       hint: "URL of the youtube video. Example: https://www.youtube.com/watch?v=HRiRtzyl0N0",
+                      pattern:
+                        [
+                          'https:\/\/www\.youtube\.com\/watch\?v=[\w-]+',
+                          "Must be a valid YouTube video URL",
+                        ],
                     }
                   - {
-                      thumbnail: "Thumbnail",
+                      label: "Thumbnail",
                       name: "thumbnail",
                       widget: "image",
                       hint: "Thumbnail to be used for the youtube video card. Pick a good one :).",
