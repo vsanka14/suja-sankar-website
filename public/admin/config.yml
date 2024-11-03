@@ -184,7 +184,7 @@ collections:
                       label: "Text",
                       name: "text",
                       widget: "string",
-                      hint: "Point to be shown in the teaching journey card. For example - Teaching Experience: 20+ years across USA and India. Maximum length: 12 words.",
+                      hint: "Point to be shown in the teaching journey card. The foramt should be like this - [area]: [description about area]. Use quantifiable points wherever possible. For example:\nTeaching Experience: 20+ years across USA and India. Maximum length: 12 words.",
                     }
   - name: "videos"
     label: "Videos Page"
