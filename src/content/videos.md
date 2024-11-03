@@ -8,7 +8,7 @@ videosSection:
         a demonstrated experiment to explain the law.
       url: https://www.youtube.com/watch?v=EEcjMJdQA3w
       duration: 12:25
-      thumbnail: /images/thumbnail_l.jpeg
+      thumbnail: /images/scales.png
     - title: Chemistry of Soaps and Detergents
       description: Hand Hygiene and Chemistry of Soaps and Detergents.
       url: https://www.youtube.com/watch?v=GDROX6Vw11c
