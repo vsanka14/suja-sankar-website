@@ -1,7 +1,6 @@
 ---
 heroSection:
-  description:
-    With over 20 years of teaching experience, I help students discover
+  description: With over 20 years of teaching experience, I help students discover
     the fascinating world of chemistry through engaging and effective
     instruction.
   primaryBtnText: Get Started
@@ -29,8 +28,7 @@ testimonialsSection:
     - name: Dr. Sarah Chen
       role: Education Professional
       details: Department Head, Science
-      content:
-        Suja's innovative teaching methods and deep understanding of chemistry
+      content: Suja's innovative teaching methods and deep understanding of chemistry
         have made her an invaluable mentor to both students and fellow teachers.
         Her ability to break down complex concepts is remarkable.
       emoji: 👩‍🔬
@@ -42,13 +40,12 @@ testimonialsSection:
         style made even the most challenging topics approachable. I'm now
         pursuing Chemical Engineering in college.
 
-      emoji: 🎓
+      emoji: 🧑‍🎓
     - name: Lisa Thompson
       role: Parent
       details: Parent of AP Chemistry Student
-      content:
-        We saw a complete transformation in our daughter's confidence with
+      content: We saw a complete transformation in our daughter's confidence with
         chemistry under Mrs. Sankar's guidance. Her dedication to student
         success is exceptional.
-      emoji: 👋
+      emoji: 👩
 ---
