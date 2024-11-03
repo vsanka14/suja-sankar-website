@@ -1,9 +1,9 @@
 ---
-import Layout from "@/layouts/layout.astro";
-import Card from "@/components/card.astro";
-import type { AboutSection } from "@/types/about";
+import Layout from "../layouts/layout.astro";
+import Card from "../components/card.astro";
+import type { AboutSection } from "../types/about";
 
-const content = await import("@/content/about.md");
+const content = await import("../content/about.md");
 const { aboutSection } = content.frontmatter as {
   aboutSection: AboutSection;
 };
