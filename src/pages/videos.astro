@@ -2,7 +2,7 @@
 import Layout from "../layouts/layout.astro";
 import Video from "../components/video.astro";
 import Card from "../components/card.astro";
-import { VideosSection } from "../types/videos";
+import type { VideosSection } from "../types/videos";
 
 const content = await import("../content/videos.md");
 const { videosSection } = content.frontmatter as {
