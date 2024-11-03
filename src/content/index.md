@@ -25,12 +25,14 @@ testimonialsSection:
   title: Testimonials
   emoji: ✍️
   testimonials:
-    - name: Dr. Sarah Chen
+    - name: Bree Denton
       role: Education Professional
-      details: Department Head, Science
-      content: Suja's innovative teaching methods and deep understanding of chemistry
-        have made her an invaluable mentor to both students and fellow teachers.
-        Her ability to break down complex concepts is remarkable.
+      details: K-12 Education, Business and Technology
+      content: Suja is an amazing educator and team player. Students were always so
+        proud of what they were doing in her class and she cares so very much
+        for them and teaching her content. She is very well versed in her area
+        of expertise and has been a joy to work with. Her kindness is so
+        important to any workplace!
       emoji: 👩‍🔬
     - name: James Miller
       role: Student
