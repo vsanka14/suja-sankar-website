@@ -21,4 +21,11 @@ export default defineConfig({
   },
   srcDir: "./src",
   outDir: "./dist",
+  vite: {
+    resolve: {
+      alias: {
+        "@": path.resolve("./src"),
+      },
+    },
+  },
 });
