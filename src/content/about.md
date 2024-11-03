@@ -14,12 +14,20 @@ aboutSection:
   title: About Me
   emoji: 👩‍🔬
   details: >-
-    Hi there! I am Suja Sankar and  chemistry has been a lifelong passion of
-    mine, sparked by an early fascination with the incredible ways it shapes our
-    world. 
+    Hi! I'm Suja Sankar, and chemistry has been a lifelong passion. My journey
+    began in childhood, sparked by my father and an inspiring chemistry teacher
+    who showed me the fascinating ways science shapes our world. Captivated by
+    the reactions I observed, I knew chemistry was at the heart of everything.
 
 
-    My journey began in childhood, inspired by my father and an exceptional chemistry teacher who brought science to life through hands-on experiments and real-world connections. Watching chemical reactions unfold before my eyes, I became captivated by the idea that chemistry is at the heart of everything we do and everything we are.
+
+
+    With over 20 years of teaching experience, I now specialize as an online tutor in AP Chemistry, college-level Chemistry, and advanced high school Chemistry. My goal is to make chemistry accessible, engaging, and relevant for my students, fostering critical thinking and problem-solving skills. Through one-on-one sessions or small group discussions on Zoom, I work to build students’ confidence in STEM.
+
+
+
+
+    I believe every student can master chemistry, and I’m here to guide them with patience, encouragement, and support. Thank you for visiting—I look forward to helping you explore the wonders of chemistry!
   funFact: Carbon is my favorite element because it’s the backbone of
     life—literally! Without it, we'd be in a real 'bind.
   image: /images/suja-sankar.jpg
