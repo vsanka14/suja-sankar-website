@@ -26,7 +26,7 @@ collections:
                   label: "Title",
                   name: "title",
                   widget: "string",
-                  hint: "Title of the hero section in the landing page. Maximum length: 3 words",
+                  hint: "Title of the hero section in the landing page. Maximum length: 3 words.",
                 }
               - {
                   label: "Description",
@@ -38,13 +38,13 @@ collections:
                   label: "Primary Button Text",
                   name: "primaryBtnText",
                   widget: "string",
-                  hint: "Text for the primary button in the hero section. Maximum length: 2 words",
+                  hint: "Text for the primary button in the hero section. Maximum length: 2 words.",
                 }
               - {
                   label: "Secondary Button Text",
                   name: "secondaryBtnText",
                   widget: "string",
-                  hint: "Text for the secondary button in the hero section. Maximum length: 2 words",
+                  hint: "Text for the secondary button in the hero section. Maximum length: 2 words.",
                 }
           - label: "Highlights Section"
             name: "highlightsSection"
@@ -54,7 +54,7 @@ collections:
                   label: "Section Title",
                   name: "title",
                   widget: "string",
-                  hint: "Title of the highlights section in the landing page. Maximum length: 3 words",
+                  hint: "Title of the highlights section in the landing page. Maximum length: 3 words.",
                 }
               - {
                   label: "Section Emoji",
@@ -70,19 +70,19 @@ collections:
                       label: "Title",
                       name: "title",
                       widget: "string",
-                      hint: "Title of the highlight. Maximum length: 2 words",
+                      hint: "Title of the highlight. Maximum length: 2 words.",
                     }
                   - {
                       label: "Description",
                       name: "description",
                       widget: "string",
-                      hint: "Description of the highlight. Maximum length: 15 words",
+                      hint: "Description of the highlight. Maximum length: 15 words.",
                     }
               - {
                   label: "Highlights Quote",
                   name: "highlightsQuote",
                   widget: "string",
-                  hint: "Quote for the highlights section. Maximum length: 35 words",
+                  hint: "Quote for the highlights section. Maximum length: 35 words.",
                 }
           - label: "Testimonials Section"
             name: "testimonialsSection"
@@ -92,7 +92,7 @@ collections:
                   label: "Section Title",
                   name: "title",
                   widget: "string",
-                  hint: "Title of the testimonials section in the landing page. Maximum length: 2 words",
+                  hint: "Title of the testimonials section in the landing page. Maximum length: 2 words.",
                 }
               - {
                   label: "Section Emoji",
@@ -108,13 +108,13 @@ collections:
                       label: "Name",
                       name: "name",
                       widget: "string",
-                      hint: "Name of the person writing the testimonial. Example: Dr. Sarah Chen",
+                      hint: "Name of the person writing the testimonial. Example: Dr. Sarah Chen.",
                     }
                   - {
                       label: "Role",
                       name: "role",
                       widget: "string",
-                      hint: "Role of the person writing the testimonial. Example: Education Professional / Student / Parent",
+                      hint: "Role of the person writing the testimonial. Allowed values: Education Professional / Student / Parent.",
                     }
                   - {
                       label: "Content",
@@ -140,17 +140,48 @@ collections:
             name: "aboutSection"
             widget: "object"
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Emoji", name: "emoji", widget: "string" }
-              - { label: "details", name: "details", widget: "markdown" }
-              - { label: "Fun Fact", name: "funFact", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "string",
+                  hint: "Title of the about me section. Maximum length: 2 words.",
+                }
+              - {
+                  label: "Emoji",
+                  name: "emoji",
+                  widget: "string",
+                  hint: "Emoji used for the about me section. Use https://emojipedia.org/ to search and paste emojis.",
+                }
+              - {
+                  label: "details",
+                  name: "details",
+                  widget: "markdown",
+                  hint: "Main content for about me section. Use 2-3 paragraphs. Maximum length: 160 words.",
+                }
+              - {
+                  label: "Fun Fact",
+                  name: "funFact",
+                  widget: "string",
+                  hint: "Fun fact about you. Maximum length: 20 words.",
+                }
+              - {
+                  label: "Image",
+                  name: "image",
+                  widget: "image",
+                  hint: "Your image to be used in the about me page. Pick a good one :).",
+                }
               - label: "Teaching Journey"
                 name: "teachingJourney"
                 widget: "list"
                 fields:
-                  - { label: "Emoji", name: "emoji", widget: "string" }
-                  - { label: "Text", name: "text", widget: "string" }
+                  - {
+                      label: "Emoji",
+                      name: "emoji",
+                      widget: "string",
+                      hint: "Emoji used for teaching journey point. Use https://emojipedia.org/ to search and paste emojis.",
+                    }
+                  - { label: "Text", name: "text", widget: "string", hint: "Point to be shown in the teaching journey card. For example - Teaching Experience: 20+ years across USA and India. Maximum length: 12 words." }
+" }
   - name: "videos"
     label: "Videos Page"
     files:
