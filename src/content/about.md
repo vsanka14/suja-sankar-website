@@ -10,7 +10,7 @@ aboutSection:
     - emoji: 📚
       text: "Impact: 500+ hours per student, 1000+ students mentored"
     - emoji: 🌍
-      text: "Languages: Tamil, English, Hindi, Gujarati"
+      text: "Languages: English, Tamil, Hindi, Gujarati"
   title: About Me
   emoji: 👩‍🔬
   details: >-
