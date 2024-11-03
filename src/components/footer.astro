@@ -1,16 +1,41 @@
 ---
-
+// Footer.astro
+const currentYear = new Date().getFullYear();
 ---
 
 <footer
   class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-auto"
 >
-  <div class="max-w-7xl mx-auto py-2 px-4 sm:px-6 lg:px-8">
-    <p class="text-center text-gray-500 dark:text-gray-400">
-      © 2024 Suja Sankar's Chemistry Lab. All rights reserved.
-    </p>
-    <p class="text-center text-sm text-gray-400 dark:text-gray-500 mt-2">
-      Transforming chemistry education, one reaction at a time 🧪
-    </p>
+  <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col items-center space-y-2">
+      <p class="text-sm text-gray-400 dark:text-gray-500">
+        Transforming chemistry education, one reaction at a time 💫
+      </p>
+      <div
+        class="flex items-center space-x-1 text-sm text-gray-500 dark:text-gray-400"
+      >
+        <a
+          href="mailto:sujasankar22@gmail.com"
+          class="flex items-center hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+        >
+          <svg
+            class="w-4 h-4 mr-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+            ></path>
+          </svg>
+          sujasankar22@gmail.com
+        </a>
+        <span class="text-gray-300 dark:text-gray-600 text-xl">•</span>
+        <span>© {currentYear} Suja Sankar</span>
+      </div>
+    </div>
   </div>
 </footer>
