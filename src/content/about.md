@@ -22,4 +22,5 @@ aboutSection:
     My journey began in childhood, inspired by my father and an exceptional chemistry teacher who brought science to life through hands-on experiments and real-world connections. Watching chemical reactions unfold before my eyes, I became captivated by the idea that chemistry is at the heart of everything we do and everything we are.
   funFact: Carbon is my favorite element because it’s the backbone of
     life—literally! Without it, we'd be in a real 'bind.
+  image: /images/suja-sankar.jpg
 ---
