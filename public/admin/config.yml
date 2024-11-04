@@ -185,7 +185,12 @@ collections:
                           "Must be 5 words or less",
                         ],
                     }
-                  - { label: "Emoji", name: "emoji", widget: "string" }
+                  - {
+                      label: "Emoji",
+                      name: "emoji",
+                      widget: "string",
+                      hint: "Emoji to be used for the testimonial. Use https://emojipedia.org/ to search and paste emojis.",
+                    }
   - name: "about"
     label: "About Page"
     files:

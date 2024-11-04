@@ -10,28 +10,44 @@ const { href, text, isMobile = false } = Astro.props;
 
 <style>
   @keyframes bubble-up {
-    0%,
+    0% {
+      opacity: 0;
+      transform: translateY(8px) scale(0.8);
+    }
+    45% {
+      opacity: 1;
+      transform: translateY(-4px) scale(1.2);
+    }
     100% {
       opacity: 0;
-      transform: translateY(10px);
-    }
-    50% {
-      opacity: 1;
-      transform: translateY(-2px);
+      transform: translateY(-10px) scale(0.8);
     }
   }
 
   .desktop-nav-item {
     position: relative;
     transition: color 0.2s ease;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.375rem;
+    margin: -0.25rem -0.75rem; /* Offset the padding to maintain original spacing */
+  }
+
+  .desktop-nav-item .text-content {
+    display: inline-block;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+  }
+
+  .desktop-nav-item:hover .text-content {
+    transform: translateY(-2px);
   }
 
   .desktop-nav-item::before {
     content: "";
     position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 100%;
+    bottom: 0.25rem;
+    left: 0.75rem;
+    width: calc(100% - 1.5rem);
     height: 2px;
     background-color: rgb(216, 80, 240);
     transform: scaleX(0);
@@ -52,18 +68,20 @@ const { href, text, isMobile = false } = Astro.props;
     background-color: rgb(216, 80, 240);
     opacity: 0;
     pointer-events: none;
+    box-shadow: 0 0 6px rgb(216, 80, 240);
+    filter: blur(0.3px);
   }
 
   .desktop-nav-item:hover .bubble-1 {
-    animation: bubble-up 1s ease-out infinite;
+    animation: bubble-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   }
 
   .desktop-nav-item:hover .bubble-2 {
-    animation: bubble-up 1s ease-out infinite 0.2s;
+    animation: bubble-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) infinite 0.2s;
   }
 
   .desktop-nav-item:hover .bubble-3 {
-    animation: bubble-up 1s ease-out infinite 0.4s;
+    animation: bubble-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) infinite 0.4s;
   }
 
   /* Dark mode styles */
@@ -73,6 +91,7 @@ const { href, text, isMobile = false } = Astro.props;
 
   :global(.dark) .bubble {
     background-color: rgb(236, 64, 255);
+    box-shadow: 0 0 6px rgb(236, 64, 255);
   }
 </style>
 
@@ -86,13 +105,13 @@ const { href, text, isMobile = false } = Astro.props;
       : "text-gray-600 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white desktop-nav-item relative",
   ]}
 >
-  {text}
+  <span class="text-content">{text}</span>
   {
     !isMobile && (
       <>
-        <div class="bubble bubble-1" style="left: 20%; bottom: 0;" />
-        <div class="bubble bubble-2" style="left: 50%; bottom: 0;" />
-        <div class="bubble bubble-3" style="left: 80%; bottom: 0;" />
+        <div class="bubble bubble-1" style="left: 20%; bottom: 0.25rem;" />
+        <div class="bubble bubble-2" style="left: 50%; bottom: 0.25rem;" />
+        <div class="bubble bubble-3" style="left: 80%; bottom: 0.25rem;" />
       </>
     )
   }
