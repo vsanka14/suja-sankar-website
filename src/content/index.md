@@ -5,7 +5,7 @@ heroSection:
     instruction.
   primaryBtnText: Get Started
   secondaryBtnText: Learn More
-  title: Making Chemistry Click!
+  title: Making Chemistry Click
 highlightsSection:
   title: Chemistry Made Easy
   emoji: 🧪
