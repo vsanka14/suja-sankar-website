@@ -2,7 +2,9 @@
   <a
     href="/"
     aria-label="Link to home page"
-    class="flex items-center group touch-manipulation"
+    class="flex items-center group touch-manipulation animate-parent"
+    onmouseout="this.classList.add('animate-continue'); setTimeout(() => this.classList.remove('animate-continue'), 500);"
+    ontouchend="this.classList.add('animate-continue'); setTimeout(() => this.classList.remove('animate-continue'), 500);"
   >
     <div class="relative w-12 h-12">
       <div
@@ -24,7 +26,6 @@
           viewBox="0 0 80 80"
           class="w-10 h-10 transform transition-transform duration-300 group-hover:scale-110 group-active:scale-110"
         >
-          <!-- SVG content remains the same -->
           <!-- Main test tube with rounded bottom -->
           <path
             d="M30 15 
@@ -210,6 +211,7 @@
     overflow: hidden;
     border-radius: 0.5rem;
     transition: opacity 0.3s ease;
+    opacity: 0;
   }
 
   .bubble {
@@ -220,15 +222,24 @@
     animation-play-state: paused;
   }
 
+  .group:hover .bubble-container,
+  .group:active .bubble-container,
+  .animate-continue .bubble-container {
+    opacity: 1;
+  }
+
   .group:hover .bubble,
-  .group:active .bubble {
+  .group:active .bubble,
+  .animate-continue .bubble {
     animation-play-state: running;
   }
 
   .group:hover .sparkles,
   .group:hover .stars,
   .group:active .sparkles,
-  .group:active .stars {
+  .group:active .stars,
+  .animate-continue .sparkles,
+  .animate-continue .stars {
     opacity: 1;
   }
 
@@ -277,7 +288,8 @@
   }
 
   :global(.group:hover) .potion,
-  :global(.group:active) .potion {
+  :global(.group:active) .potion,
+  :global(.animate-continue) .potion {
     transform: scale(1.05);
   }
 
@@ -286,11 +298,11 @@
   }
 
   :global(.group:hover) .animate-on-hover,
-  :global(.group:active) .animate-on-hover {
+  :global(.group:active) .animate-on-hover,
+  :global(.animate-continue) .animate-on-hover {
     animation-play-state: running;
   }
 
-  /* Prevent touch callout */
   @media (hover: none) {
     .touch-manipulation {
       touch-action: manipulation;
