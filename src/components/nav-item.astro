@@ -1,4 +1,6 @@
 ---
+import classNames from "classnames";
+
 interface Props {
   href: string;
   text: string;
@@ -98,12 +100,15 @@ const { href, text, isMobile = false } = Astro.props;
 <a
   href={href}
   aria-label={`Link to the ${text} page`}
-  class:list={[
+  class={classNames(
     "hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200",
-    isMobile
-      ? "block w-full px-3 py-2 rounded-md text-base font-medium text-gray-600 dark:text-gray-200"
-      : "text-gray-600 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white desktop-nav-item relative",
-  ]}
+    {
+      "block w-full px-3 py-2 rounded-md text-base font-medium text-gray-600 dark:text-gray-200 mobile-nav-item":
+        isMobile,
+      "text-gray-600 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white desktop-nav-item relative":
+        !isMobile,
+    }
+  )}
 >
   <span class="text-content">{text}</span>
   {

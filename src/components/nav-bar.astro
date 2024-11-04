@@ -11,7 +11,9 @@ const navItems = [
 ];
 ---
 
-<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<nav
+  class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-50 bg-white dark:bg-gray-800"
+>
   <div class="flex justify-between h-16">
     <div class="flex items-center">
       <NavLogo />
@@ -27,42 +29,60 @@ const navItems = [
       <MobileNavButton />
     </div>
   </div>
-
-  {/* Mobile Navigation Menu */}
-  <div class="hidden md:hidden" id="mobile-menu">
-    <div class="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-800">
-      {
-        navItems.map((item) => (
-          <NavItem href={item.href} text={item.text} isMobile={true} />
-        ))
-      }
-    </div>
-  </div>
 </nav>
 
-<script>
-  const mobileMenuButton = document.getElementById("mobile-menu-button");
-  const mobileMenu = document.getElementById("mobile-menu");
-  const hamburgerIcon = document.getElementById("hamburger-icon");
-  const testTubeIcon = document.getElementById("test-tube-icon");
-
-  mobileMenuButton?.addEventListener("click", () => {
-    const isExpanded =
-      mobileMenuButton.getAttribute("aria-expanded") === "true";
-    mobileMenuButton.setAttribute("aria-expanded", (!isExpanded).toString());
-    mobileMenu?.classList.toggle("hidden");
-
-    // Toggle icons
-    if (hamburgerIcon && testTubeIcon) {
-      if (!isExpanded) {
-        hamburgerIcon.classList.add("opacity-0");
-        testTubeIcon.classList.remove("opacity-0");
-        testTubeIcon.classList.add("menu-open");
-      } else {
-        hamburgerIcon.classList.remove("opacity-0");
-        testTubeIcon.classList.add("opacity-0");
-        testTubeIcon.classList.remove("menu-open");
-      }
+{/* Mobile Navigation Menu */}
+<div
+  class="mobile-menu fixed inset-0 top-0 bg-black/20 z-40 opacity-0 pointer-events-none transition-opacity duration-500"
+  id="mobile-menu"
+>
+  <div
+    class="mobile-menu-drawer absolute left-0 right-0 top-0 px-2 pt-20 pb-3 space-y-1 bg-white dark:bg-gray-800 transform -translate-y-full transition-transform duration-500 shadow-lg"
+  >
+    {
+      navItems.map((item) => (
+        <NavItem href={item.href} text={item.text} isMobile={true} />
+      ))
     }
+  </div>
+</div>
+
+<style>
+  .mobile-menu.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-menu.open .mobile-menu-drawer {
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileNavItems = document.getElementsByClassName("mobile-nav-item");
+
+    mobileMenuButton?.addEventListener("click", () => {
+      const isExpanded =
+        mobileMenuButton.getAttribute("aria-expanded") === "true";
+      mobileMenuButton.setAttribute("aria-expanded", (!isExpanded).toString());
+
+      mobileMenuButton.classList.toggle("menu-open");
+      mobileMenu?.classList.toggle("open");
+
+      if (!isExpanded) {
+        [...mobileNavItems]?.forEach((item) => {
+          item.classList.add("opacity-1");
+          item.classList.remove("opacity-0");
+        });
+      } else {
+        [...mobileNavItems]?.forEach((item) => {
+          item.classList.remove("opacity-1");
+          item.classList.add("opacity-0");
+        });
+      }
+    });
   });
 </script>

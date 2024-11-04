@@ -1,55 +1,44 @@
----
-
----
-
 <style>
-  @keyframes bubble {
-    0%,
-    100% {
-      transform: translateY(0);
-      opacity: 0.8;
-    }
-    50% {
-      transform: translateY(-3px);
-      opacity: 1;
-    }
+  .hamburger-icon {
+    position: relative;
+    width: 24px;
+    height: 24px;
   }
 
-  .menu-open .bubble-1 {
-    animation: bubble 1.2s ease-in-out infinite;
-  }
-  .menu-open .bubble-2 {
-    animation: bubble 1.2s ease-in-out infinite 0.3s;
-  }
-  .menu-open .bubble-3 {
-    animation: bubble 1.2s ease-in-out infinite 0.6s;
-  }
-
-  #test-tube-icon .solution {
-    fill: rgb(216, 80, 240);
-    opacity: 0.8;
+  .hamburger-line {
+    position: absolute;
+    left: 4px;
+    height: 2px;
+    width: 16px;
+    background-color: currentColor;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
   }
 
-  #test-tube-icon .bubble {
-    fill: rgb(245, 169, 255);
+  .hamburger-line:nth-child(1) {
+    top: 6px;
   }
 
-  :global(.dark) #test-tube-icon .solution {
-    fill: rgb(236, 64, 255);
-    opacity: 0.9;
+  .hamburger-line:nth-child(2) {
+    top: 11px;
   }
 
-  :global(.dark) #test-tube-icon .bubble {
-    fill: rgb(255, 214, 255);
+  .hamburger-line:nth-child(3) {
+    top: 16px;
   }
 
-  #test-tube-icon .tube-outline {
-    stroke: rgb(255, 128, 255);
-    stroke-width: 1.5;
+  /* Animation for open state */
+  .menu-open .hamburger-line:nth-child(1) {
+    transform: translateY(5px) rotate(45deg);
   }
 
-  :global(.dark) #test-tube-icon .tube-outline {
-    stroke: rgb(255, 166, 255);
+  .menu-open .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-open .hamburger-line:nth-child(3) {
+    transform: translateY(-5px) rotate(-45deg);
   }
 </style>
 
@@ -61,31 +50,9 @@
   aria-expanded="false"
 >
   <span class="sr-only">Open main menu</span>
-  <svg
-    class="block h-6 w-6 transition-transform duration-300"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    aria-hidden="true"
-  >
-    <g class="transition-opacity duration-300" id="hamburger-icon">
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        stroke="currentColor"
-        d="M4 6h16M4 12h16M4 18h16"></path>
-    </g>
-    <g class="opacity-0 transition-opacity duration-300" id="test-tube-icon">
-      <path
-        class="tube-outline"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        fill="none"
-        d="M9 4h6v4l-3 12h-0.5l-2.5-12z"></path>
-      <path class="solution" d="M9.2 8h5.6l-2.8 11h-0.4l-2.4-11z"></path>
-      <circle class="bubble bubble-1" cx="12" cy="14" r="1"></circle>
-      <circle class="bubble bubble-2" cx="11" cy="11" r="0.8"></circle>
-      <circle class="bubble bubble-3" cx="13" cy="12" r="0.9"></circle>
-    </g>
-  </svg>
+  <div class="hamburger-icon">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </div>
 </button>
