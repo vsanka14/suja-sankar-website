@@ -34,14 +34,15 @@ testimonialsSection:
         of expertise and has been a joy to work with. Her kindness is so
         important to any workplace!
       emoji: 👩‍🔬
-    - name: James Miller
+    - name: Natalie Clark
       role: Student
-      details: Class of 2023
-      content: >+
-        Mrs. Sankar helped me discover my passion for chemistry. Her teaching
-        style made even the most challenging topics approachable. I'm now
-        pursuing Chemical Engineering in college.
-
+      details: "Class of 2023 "
+      content: >
+        Suja is not only an amazing person but an amazing teacher as well. She
+        is so intelligent and knows how to break the information down so that it
+        makes sense and is not overwhelming. She welcomes questions and ensures
+        that the topic is understood before moving on.  Her teaching and life
+        lessons have stuck with me!
       emoji: 🧑‍🎓
     - name: Lisa Thompson
       role: Parent
