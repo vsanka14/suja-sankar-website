@@ -52,4 +52,13 @@ testimonialsSection:
         progress and further her education. I am confident in recommending her
         to anyone as a teacher.
       emoji: 👩
+    - name: Lauren
+      role: Student
+      content: Mrs. Suja was my Highschool chemistry teacher and she is the best!
+        she's so much fun and one of the best teachers I've ever had! And
+        probably the only one that never lost any of my papers! If you don't
+        understand something she will take the time to make sure you understand
+        .
+      details: Class of 2022
+      emoji: 👩‍🎓
 ---
