@@ -44,11 +44,12 @@ testimonialsSection:
         that the topic is understood before moving on.  Her teaching and life
         lessons have stuck with me!
       emoji: 🧑‍🎓
-    - name: Lisa Thompson
+    - name: Adryce Forcier
       role: Parent
       details: Parent of AP Chemistry Student
-      content: We saw a complete transformation in our daughter's confidence with
-        chemistry under Mrs. Sankar's guidance. Her dedication to student
-        success is exceptional.
+      content: My daughter had Suja as an AP Chemistry teacher. With Suja as her
+        teacher she has achieved a very strong foundation allowing her to
+        progress and further her education. I am confident in recommending her
+        to anyone as a teacher.
       emoji: 👩
 ---
