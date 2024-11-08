@@ -15,10 +15,13 @@ videosSection:
       duration: 27:15
       thumbnail: /images/types-of-detergents-for-washing-machine.jpg
     - title: Gay Lussac's Law of Volume
-      description: This video explains the Gay Lussac's Law of volume. A very simple
-        law that is an extension of the law of constant proportion
+      description: This video explains the Gay Lussac's Law of volume.
       url: https://www.youtube.com/watch?v=HRiRtzyl0N0
       duration: 2:41
       thumbnail: /images/images.jpeg
+    - title: Counting Significant Figures
+      description: This video explains tips and tricks to count significant figures,
+      url: https://www.youtube.com/watch?v=G_EkIiP8hgc&t=237s
+      thumbnail: /images/slide1.jpg
   description: Watch and learn from my collection of chemistry tutorials and demonstrations.
 ---
