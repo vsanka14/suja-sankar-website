@@ -61,4 +61,13 @@ testimonialsSection:
         .
       details: Class of 2022
       emoji: 👩‍🎓
+    - name: Jodie Szmagalski
+      role: Education Professional
+      content: "I have had the pleasure of teaching along with Suja Sankar in
+        Chemistry 2021 - 2022. The knowledge and mastery of her subject was
+        clear. She helped so much with planning and strategy to translate the
+        content to students with ease. I am forever grateful  that I had the
+        opportunity to learn and grow from her as a teacher. "
+      details: K-12 Professional
+      emoji: 👩‍🏫
 ---
