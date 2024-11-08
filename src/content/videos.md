@@ -23,5 +23,10 @@ videosSection:
       description: This video explains tips and tricks to count significant figures,
       url: https://www.youtube.com/watch?v=G_EkIiP8hgc&t=237s
       thumbnail: /images/slide1.jpg
+    - title: Periodic Table- Key points
+      description: This video is a short description of arrangement of elements in the
+        Periodic Table
+      url: https://www.youtube.com/watch?v=rFnQEiOCxRA&t=2s
+      thumbnail: /images/iupac_periodic_table_150-04may22.jpg
   description: Watch and learn from my collection of chemistry tutorials and demonstrations.
 ---
