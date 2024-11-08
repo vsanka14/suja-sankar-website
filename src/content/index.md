@@ -70,4 +70,14 @@ testimonialsSection:
         opportunity to learn and grow from her as a teacher. "
       details: K-12 Professional
       emoji: 👩‍🏫
+    - name: Mason Rushing
+      role: Student
+      content: Mrs. Suja Sankar was an exceptional chemistry teacher who made a
+        lasting impact during my 10th grade year. Her passion for chemistry and
+        dedication  created an engaging learning environment. She explained
+        complex topics with clarity and patience, sparking curiosity and
+        confidence in us. Mrs. Sankar’s teaching further boosted my interest in
+        science and my dream to pursue a meteorology major.
+      details: Sophomore student 2023-2024
+      emoji: 👨‍🔬
 ---
