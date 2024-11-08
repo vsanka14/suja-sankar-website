@@ -80,4 +80,14 @@ testimonialsSection:
         science and my dream to pursue a meteorology major.
       details: Sophomore student 2023-2024
       emoji: 👨‍🔬
+    - name: Maria De la Fuente
+      role: Student
+      content: Mrs. Suja is an exceptional teacher who makes learning engaging and
+        fun. Her dedication to her students is obvious in her creative lessons
+        and personalized attention. She inspires confidence and curiosity,
+        helping every student reach their full potential. Mrs. Suja’s passion
+        for teaching and genuine care for her students make her an crucial asset
+        to any classroom.
+      details: College Chemistry student 2022-2023
+      emoji: 👩‍🔬
 ---
