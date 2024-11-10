@@ -9,6 +9,7 @@ import type {
   HighlightsSection,
   TestimonialsSection,
 } from "@/types/home";
+import TestimonialsCarousel from "@/components/testimonials-carousel.astro";
 
 const metadata = {
   title: "Home",
@@ -65,19 +66,7 @@ const testimonials = testimonialsSection.testimonials;
 
     {/* Testimonials Section */}
     <Card title={testimonialsSection.title} emoji={testimonialsSection.emoji}>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {
-          testimonials.map((testimonial) => (
-            <Testimonial
-              name={testimonial.name}
-              role={testimonial.role}
-              content={testimonial.content}
-              details={testimonial.details}
-              emoji={testimonial.emoji}
-            />
-          ))
-        }
-      </div>
+      <TestimonialsCarousel testimonials={testimonials} />
     </Card>
   </div>
 </Layout>
