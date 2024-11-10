@@ -1,0 +1,142 @@
+---
+import { TestimonialRoles } from "@/types/home";
+import TestimonialCard from "./testimonial.astro";
+import CarouselBtn, { CarouselBtnType } from "./carousel-btn.astro";
+
+interface Testimonial {
+  emoji: string;
+  name: string;
+  role: TestimonialRoles;
+  details?: string;
+  content: string;
+}
+
+interface Props {
+  testimonials: Testimonial[];
+}
+
+const { testimonials } = Astro.props;
+---
+
+<div class="testimonials-carousel relative group">
+  <CarouselBtn
+    id="prevBtn"
+    ariaLabel="Previous testimonial"
+    type={CarouselBtnType.PREVIOUS}
+  />
+
+  <div class="overflow-hidden">
+    <div
+      class="carousel-track flex transition-transform duration-500 ease-in-out"
+    >
+      {
+        testimonials.map((testimonial) => (
+          <div class="carousel-slide min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-3">
+            <TestimonialCard {...testimonial} />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <CarouselBtn
+    id="nextBtn"
+    ariaLabel="Next testimonial"
+    type={CarouselBtnType.NEXT}
+  />
+</div>
+
+<script>
+  const BREAKPOINTS = {
+    lg: 1024,
+    md: 768,
+  };
+
+  class CarouselController {
+    track: HTMLElement;
+    slides: HTMLElement[];
+    currentIndex: number = 0;
+    prevBtn: HTMLButtonElement;
+    nextBtn: HTMLButtonElement;
+
+    constructor() {
+      this.track = document.querySelector(".carousel-track")!;
+      this.slides = Array.from(
+        document.querySelectorAll(".carousel-slide")
+      ) as HTMLElement[];
+      this.prevBtn = document.querySelector("#prevBtn") as HTMLButtonElement;
+      this.nextBtn = document.querySelector("#nextBtn") as HTMLButtonElement;
+
+      this.setupControls();
+      this.updateTransform();
+      this.updateButtonStates();
+
+      window.addEventListener("resize", () => {
+        this.updateTransform();
+        this.updateButtonStates();
+      });
+    }
+
+    getSlidesPerView(): number {
+      if (window.innerWidth >= BREAKPOINTS.lg) {
+        return 3;
+      } else if (window.innerWidth >= BREAKPOINTS.md) {
+        return 2;
+      }
+      return 1;
+    }
+
+    getSlideWidth(): number {
+      const slidesPerView = this.getSlidesPerView();
+      return 100 / slidesPerView;
+    }
+
+    setupControls() {
+      this.prevBtn.addEventListener("click", () => this.prev());
+      this.nextBtn.addEventListener("click", () => this.next());
+    }
+
+    updateTransform() {
+      const slideWidth = this.getSlideWidth();
+      this.track.style.transform = `translateX(-${this.currentIndex * slideWidth}%)`;
+    }
+
+    updateButtonStates() {
+      const slidesPerView = this.getSlidesPerView();
+      const maxIndex = Math.max(0, this.slides.length - slidesPerView);
+
+      this.prevBtn.disabled = this.currentIndex === 0;
+      this.nextBtn.disabled = this.currentIndex >= maxIndex;
+    }
+
+    next() {
+      const slidesPerView = this.getSlidesPerView();
+      const maxIndex = Math.max(0, this.slides.length - slidesPerView);
+
+      if (this.currentIndex < maxIndex) {
+        this.currentIndex++;
+        this.updateTransform();
+        this.updateButtonStates();
+      }
+    }
+
+    prev() {
+      if (this.currentIndex > 0) {
+        this.currentIndex--;
+        this.updateTransform();
+        this.updateButtonStates();
+      }
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    new CarouselController();
+  });
+</script>
+
+<style>
+  .carousel-track {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+</style>
