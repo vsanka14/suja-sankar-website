@@ -61,4 +61,33 @@ testimonialsSection:
         .
       details: Class of 2022
       emoji: 👩‍🎓
+    - name: Jodie Szmagalski
+      role: Education Professional
+      content: "I have had the pleasure of teaching along with Suja Sankar in
+        Chemistry 2021 - 2022. The knowledge and mastery of her subject was
+        clear. She helped so much with planning and strategy to translate the
+        content to students with ease. I am forever grateful  that I had the
+        opportunity to learn and grow from her as a teacher. "
+      details: K-12 Professional
+      emoji: 👩‍🏫
+    - name: Mason Rushing
+      role: Student
+      content: Mrs. Suja Sankar was an exceptional chemistry teacher who made a
+        lasting impact during my 10th grade year. Her passion for chemistry and
+        dedication  created an engaging learning environment. She explained
+        complex topics with clarity and patience, sparking curiosity and
+        confidence in us. Mrs. Sankar’s teaching further boosted my interest in
+        science and my dream to pursue a meteorology major.
+      details: Sophomore student 2023-2024
+      emoji: 👨‍🔬
+    - name: Maria De la Fuente
+      role: Student
+      content: Mrs. Suja is an exceptional teacher who makes learning engaging and
+        fun. Her dedication to her students is obvious in her creative lessons
+        and personalized attention. She inspires confidence and curiosity,
+        helping every student reach their full potential. Mrs. Suja’s passion
+        for teaching and genuine care for her students make her an crucial asset
+        to any classroom.
+      details: College Chemistry student 2022-2023
+      emoji: 👩‍🔬
 ---
