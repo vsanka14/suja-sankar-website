@@ -29,6 +29,6 @@ aboutSection:
 
     I believe every student can master chemistry, and I’m here to guide them with patience, encouragement, and support. Thank you for visiting—I look forward to helping you explore the wonders of chemistry!
   funFact: Carbon is my favorite element because it’s the backbone of
-    life—literally! Without it, we'd be in a real 'bind.
+    life—literally! Without it, we'd be in a real 'bind'.
   image: /images/suja-sankar.jpg
 ---
