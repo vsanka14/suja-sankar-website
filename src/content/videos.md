@@ -28,5 +28,9 @@ videosSection:
         Periodic Table
       url: https://www.youtube.com/watch?v=rFnQEiOCxRA&t=2s
       thumbnail: /images/iupac_periodic_table_150-04may22.jpg
+    - title: Mastering the Mole Concept
+      description: This video explains the Mole Concept and its importance in Chemistry
+      url: https://www.youtube.com/watch?v=Abr7BltNhlY&list=LL
+      thumbnail: /images/chemistry_mole_illustration_edited.jpg
   description: Watch and learn from my collection of chemistry tutorials and demonstrations.
 ---
