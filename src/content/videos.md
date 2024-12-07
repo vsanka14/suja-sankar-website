@@ -32,5 +32,9 @@ videosSection:
       description: This video explains the Mole Concept and its importance in Chemistry
       url: https://www.youtube.com/watch?v=Abr7BltNhlY&list=LL
       thumbnail: /images/chemistry_mole_illustration_edited.jpg
+    - title: Problem in Mole Concept AP Chem Style
+      description: "This video explains how to solve a problem in Mole Concept. "
+      url: https://www.youtube.com/watch?v=Abr7BltNhlY
+      thumbnail: /images/cute_cartoon_mole_with_conical_flask.jpg
   description: Watch and learn from my collection of chemistry tutorials and demonstrations.
 ---
