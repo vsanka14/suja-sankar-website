@@ -90,4 +90,13 @@ testimonialsSection:
         to any classroom.
       details: College Chemistry student 2022-2023
       emoji: 👩‍🔬
+    - name: Maithri Reddy
+      role: Parent
+      content: "Suja Sankar has been teaching my son AP Chemistry during his junior
+        year of high school. Her effective teaching and dedicated support have
+        been invaluable in helping him understand complex concepts, gain
+        confidence, and achieve a strong GPA in the subject. I highly recommend
+        her for chemistry tutoring. "
+      details: "Parent of AP Chemistry student "
+      emoji: 👩
 ---
